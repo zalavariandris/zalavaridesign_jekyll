@@ -1,0 +1,12 @@
+<div class="Carousel">
+    {% for image in page.images %}
+    <figure>
+      <img src={{image.url}}>
+      <figcaption>
+        <span class="title">{{image.title}}</span>
+        <span class="description">{{image.description}}</span>
+        <span class="date">{{image.date}}</span>
+      </figcaption>
+    </figure>
+    {% endfor %}
+</div>

@@ -1,0 +1,47 @@
+{% assign currentFolder = Home %}
+
+
+{% for item in site.data.navigation %}
+    
+    {% if item.children %}
+    {% for child in item.children %}
+        {% if page.url == child.link %}
+            {% assign currentFolder = item.name %}
+        {% endif %}
+
+    {% endfor %}
+    {% endif %}
+{% endfor %}
+
+<ul class="TreeWidget">
+    {% for item in site.data.navigation %}
+    <li class={% if currentFolder == item.name %} open {% endif%}>
+        <a href="{{ item.link }}" class="{% if currentFolder == item.name %}selected{% endif %}">
+        {{ item.name }}
+        </a>
+        {% if item.children %}
+        <ul>
+        {% for item in item.children %}
+        <li>
+            <a href="{{ item.link }}" {% if page.url == item.link %}class="selected"{% endif %}>{{item.name}}</a>
+        </li>
+        {% endfor %}
+    </ul>
+        {% endif %}
+    </li>
+    {% endfor %}
+</ul>
+
+<script>
+    var menu = document.querySelector(".TreeWidget");
+    for(var elem of menu.children){
+        if(elem.tagName=="LI"){
+            elem.onclick = function(e){
+                for(var item of menu.children){
+                    item.classList.remove("open");
+                }
+                this.classList.add("open");
+            }
+        }
+    }
+</script>

@@ -1,0 +1,174 @@
+body{
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 8pt;
+    margin: auto;
+}
+
+@media only screen and (min-width: 600px) {
+  body {
+    width: 720px;
+    padding: 3em;
+  }
+}
+
+body>header{
+    flex-grow: 0;
+}
+
+body>main{
+    flex-grow: 1;
+}
+
+body{
+    background-color: #fbfbfb;
+}
+
+body>header, body>main{
+    background-color: white;
+    padding: 20px;
+}
+
+
+body>footer{
+    flex-grow: 0;
+    padding: 1em 0;
+    color: grey;
+}
+
+/*Header*/
+header{
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+header nav{
+    min-height: 7.5em;
+}
+
+header img{
+
+}
+
+h1{
+    font-weight: normal;
+    font-family: verdana;
+    text-transform: uppercase;
+    border-bottom: 1px solid #efefef;
+    margin-right: 37%;
+}
+
+/*Navigation*/
+nav{
+    font-size: 18px;
+}
+nav ul{
+    padding: 0;
+    margin: 0;
+}
+
+nav li{         
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li li {
+    display: inline;
+}
+
+nav li{
+    text-transform: uppercase;
+    font-size: 18px;
+}
+nav li li{
+    text-transform: lowercase;
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+nav a{
+    text-decoration: none;
+    color: inherit;
+}
+
+nav a:visited{
+    color: inherit;
+}
+
+nav a:hover{
+    outline: 1px solid red;
+    color: red;
+}
+
+nav a.selected{
+    color: red;
+}
+
+nav li ul{
+    overflow: hidden;
+    display: block;
+    height: 0em;
+    transition: height 0.1s;
+}
+
+nav li.open ul{
+    display: block;
+    height: 1em;
+}
+
+body.no-js nav li ul{
+    display: block;
+}
+
+
+/*Main*/
+main figure{
+    margin: 0;
+    margin-bottom: 12em;
+    /*text-align: right;*/
+}
+
+/*figure*/
+figure img{
+    max-width: 100%;
+    display: block;
+    margin-left: auto;
+    max-height: 800px;
+}
+
+figure>figcaption{
+    text-align: right;
+    margin: 0.5em 0;
+    margin-left: auto;
+    box-shadow: 1px 1px 5px 0px #0000000a;
+        display: inline-block;
+    padding: 0.5em;
+    padding-left: 3em;
+    float: right;
+}
+
+figure>figcaption>span{
+    display: block;
+}
+
+figure>figcaption>span.title{
+    margin: 0.2em 0;
+    text-transform: capitalize;
+}
+figure>figcaption>span.description{
+    font-size: 0.85em;
+    color: grey;
+}
+figure>figcaption>span.date{
+    font-size: 0.85em;
+    color: grey;
+}
+
+footer{
+    text-align: right;
+    font-style: italic;
+    font-size: 0.66em;
+}

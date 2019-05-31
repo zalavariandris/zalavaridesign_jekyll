@@ -1,0 +1,48 @@
+- name: Art
+  link: "#"
+  children:
+  - name: Sculptures
+    link: "/sculptures.html"
+  - name: Paintings
+    link: "/paintings.html"
+  - name: Studies
+    link: "/studies.html"
+  - name: Exhibitions
+    link: "/exhibitions.html"
+
+- name: Design
+  link: "#"
+  children:
+  - name: Products
+    link: "/products.html"
+  - name: environment
+    link: "/environment.html"
+  - name: Corporate
+    link: "/corporate.html"
+
+- name: Research
+  link: "#"
+  children:
+  - name: Design Ecology
+    link: "/designecology.html"
+  - name: Form Studies
+    link: "/formstudies.html"
+  - name: Workshops
+    link: "/workshops.html"
+
+- name: About
+  link: "#"
+  children:
+  - name: biography
+    link: /biography.html
+  - name: philosophy
+    link: /philosophy.html
+  - name: what can we do for you
+    link: /whatcanwedoforyou.html
+
+- name: Contact
+  link: "contact.html"
+
+
+
+
