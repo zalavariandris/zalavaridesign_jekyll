@@ -117,31 +117,28 @@
                 return Math.round(num/k)*k;
             }
 
-            var sections = {};
-            $(document).ready(function(){
-                $(".Carousel figure").each(function(){
-                    var hash = this.id;
-                    var topOffset = $(this).offset().top;
+            function setHash(hash){
+                if(hash!=undefined){
+                    if(window.location.hash!="#"+hash){
+                        history.pushState(null, null, "#"+hash);
+                    }
+                }
+            }
+            
+
+            window.addEventListener('load', function(event){
+                var sections = {};
+                for(let element of document.querySelectorAll(".Carousel figure")){
+                    var hash = element.id;
+                    var topOffset = element.offsetTop;
                     sections[round(topOffset)] = hash;
-                });
+                };
               
                 $(window).scroll(function(e){
                     var scrollTop = $(window).scrollTop();
-                    var h = sections[round(scrollTop)];
-                    if(h!=undefined){
-                        if(window.location.hash!="#"+h){
-                            history.pushState(null, null, "#"+h);
-                        }
-                    }
+                    var hash = sections[round(scrollTop)];
+                    setHash(hash);
                 });
-              
-                function setHash(st){
-                    if(h!=undefined){
-                        if(window.location.hash!="#"+h){
-                            history.pushState(null, null, "#"+h);
-                        }
-                    }
-                }
             });
         </script>
 
