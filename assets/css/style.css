@@ -167,6 +167,15 @@ figure>figcaption>span.date{
     color: grey;
 }
 
+figure>figcaption a{
+    text-decoration: none;
+    color: inherit;
+}
+figure>figcaption a:hover{
+    text-decoration: underline;
+}
+
+
 footer{
     text-align: right;
     font-style: italic;

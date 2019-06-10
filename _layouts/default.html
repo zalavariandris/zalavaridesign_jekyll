@@ -1,120 +1,154 @@
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>zalavaridesign - {{ page.title | downcase }}</title>
-    <link rel="stylesheet" href="/assets/css/style.css">
-    <style type="text/css">
-        /**/
-        .Widget-Carousel{
-          overflow: hidden;
-          position: relative;
-        }
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>zalavaridesign - {{ page.title | downcase }}</title>
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <style type="text/css">
+            /**/
+            .Widget-Carousel{
+              overflow: hidden;
+              position: relative;
+          }
 
-        .Widget-Carousel>.viewport{
-          position: absolute;
-          height: 100%;
-        }
-        .Widget-Carousel .slide{
-          position: absolute;
-          left: 0;
-        }
+          .Widget-Carousel>.viewport{
+              position: absolute;
+              height: 100%;
+          }
+          .Widget-Carousel .slide{
+              position: absolute;
+              left: 0;
+          }
 
-        .Widget-Carousel button{
-          border: none;
-          background: none;
-          display: block;
-          position: absolute;
-          
-          top: 50%;
-          padding: 1em 0;
-          margin-top: -1.5em;
-          cursor: pointer;
-        }
+          .Widget-Carousel button{
+              border: none;
+              background: none;
+              display: block;
+              position: absolute;
+              
+              top: 50%;
+              padding: 1em 0;
+              margin-top: -1.5em;
+              cursor: pointer;
+          }
 
-        .Widget-Carousel button:focus{
-          outline: none;
-        }
-        .Widget-Carousel button:hover{
-          text-decoration: underline;
-        }
+          .Widget-Carousel button:focus{
+              outline: none;
+          }
+          .Widget-Carousel button:hover{
+              text-decoration: underline;
+          }
 
-        .Widget-Carousel button.prev{
-          left: 0;
-          padding-right: 1em;
-        }
-        .Widget-Carousel button.next{
-          right: 0;
-          padding-left: 1em;
-        }
+          .Widget-Carousel button.prev{
+              left: 0;
+              padding-right: 1em;
+          }
+          .Widget-Carousel button.next{
+              right: 0;
+              padding-left: 1em;
+          }
 
-        .Widget-Carousel * {
-          user-select: none;
-        }
+          .Widget-Carousel * {
+              user-select: none;
+          }
 
-        @keyframes fadeIn{
-          to { opacity: 1; }
-        }
+          @keyframes fadeIn{
+              to { opacity: 1; }
+          }
 
-        .Widget-Carousel figure{
-          opacity: 0;
-          animation: fadeIn ease  1s;
-          animation-fill-mode: forwards;
-          position: absolute;
-          display: flex;
-          flex-direction: column;
-        }
+          .Widget-Carousel figure{
+              opacity: 0;
+              animation: fadeIn ease  1s;
+              animation-fill-mode: forwards;
+              position: absolute;
+              display: flex;
+              flex-direction: column;
+          }
 
-        .Widget-Carousel .slide img{
-          pointer-events: none;
-          user-select: none;
-          min-height: 0;
-          min-width: 0;
-          object-fit: contain;
-          object-position: right;
-        }
+          .Widget-Carousel .slide img{
+              pointer-events: none;
+              user-select: none;
+              min-height: 0;
+              min-width: 0;
+              object-fit: contain;
+              object-position: right;
+          }
 
-        /* flex layout for carousel */
-        main{
-          display: flex;
-          flex-direction: column;
-        }
-        main .Widget-Carousel{
-          flex-grow: 1;
-        }
+          /* flex layout for carousel */
+          main{
+              display: flex;
+              flex-direction: column;
+          }
+          main .Widget-Carousel{
+              flex-grow: 1;
+          }
 
-    </style>
-    <!--
-    <script type="text/javascript" src="/assets/js/treewidget.js"></script>
-    -->
-    <script type="text/javascript" src="/assets/js/carousel.js"></script>
+      </style>
+        <!--
+        <script type="text/javascript" src="/assets/js/treewidget.js"></script>
+        -->
+        <script type="text/javascript" src="/assets/js/carousel.js"></script>
+        <script type="text/javascript" src="/assets/js/jquery-3.4.1.min.js"></script>
+    </head>
+    <body class="no-js">
+        <script type="text/javascript">
+            document.body.classList.remove("no-js")
+        </script>
 
-  </head>
-  <body class="no-js">
-    <script type="text/javascript">
-        document.body.classList.remove("no-js")
-    </script>
-  	<header>
-  		<nav>
-	  		{% include navigation.html %}
-	  	</nav>
-      <a href="/">
-	  	<img src="/assets/images/logo.png">
-    </a>
-  	</header>
+        <header>
+            <nav>
+                {% include navigation.html %}
+            </nav>
+            <a href="/">
+                <img width="140px" height="90px" src="/assets/images/zalavaridesign_logo-2019.svg">
+            </a>
+        </header>
 
-  	<main>
-        {{ content }}
-	</main>
-	<footer>
-		Copyright © 2019 Zalavári Studio Bt.
-	</footer>
-    <script>
-        
-        // var item = new TreeItem(document.body.children[0].children[0].children[0].children[0]);
-        //var tree = new TreeWidget(document.querySelector(".TreeWidget"));
-        //var carousel = new Carousel(document.querySelector(".Carousel"));
-    </script>
-  </body>
+        <main>
+            {{ content }}
+        </main>
 
+        <footer>
+            Copyright © 2019 Zalavári Studio Bt.
+        </footer>
+
+        <script>
+            function round(num, k=500){
+                return Math.round(num/k)*k;
+            }
+
+            var sections = {};
+            $(document).ready(function(){
+                $(".Carousel figure").each(function(){
+                    var hash = this.id;
+                    var topOffset = $(this).offset().top;
+                    sections[round(topOffset)] = hash;
+                });
+              
+                $(window).scroll(function(e){
+                    var scrollTop = $(window).scrollTop();
+                    var h = sections[round(scrollTop)];
+                    if(h!=undefined){
+                        if(window.location.hash!="#"+h){
+                            history.pushState(null, null, "#"+h);
+                        }
+                    }
+                });
+              
+                function setHash(st){
+                    if(h!=undefined){
+                        if(window.location.hash!="#"+h){
+                            history.pushState(null, null, "#"+h);
+                        }
+                    }
+                }
+            });
+        </script>
+
+        <script>
+            // var item = new TreeItem(document.body.children[0].children[0].children[0].children[0]);
+            //var tree = new TreeWidget(document.querySelector(".TreeWidget"));
+            //var carousel = new Carousel(document.querySelector(".Carousel"));
+        </script>
+    </body>
 </html>
