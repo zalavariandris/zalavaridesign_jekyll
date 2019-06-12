@@ -99,6 +99,13 @@
             <nav>
                 {% include navigation.html %}
             </nav>
+            <ul>
+            {% for item in site.menus.header %}
+              <li class="menu-item-{{ loop.index }}">
+                <a href="{{ item.url }}" title="Go to {{ item.title }}">{{ item.title }}</a>
+              </li>
+            {% endfor %}
+            </ul>
             <a href="/">
                 <img width="140px" height="90px" src="/assets/images/zalavaridesign_logo-2019.svg">
             </a>
