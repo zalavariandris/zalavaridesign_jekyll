@@ -1,10 +1,6 @@
 ---
 layout: default
 title: Contact
-menu:
-  header:
-    weight: 1
-    parent: item_PoRVxNj
 
 ---
 # Contact

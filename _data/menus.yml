@@ -1,21 +1,17 @@
 ---
 header:
-- title: Art
-  url: ""
-  identifier: art
-
-- title: Design
-  url: ""
-  identifier: design
-
-- title: Research
-  url: ""
-  identifier: research
-
-- title: About
-  url: ""
-  identifier: about
-
 - title: Contact
-  url: ""
   identifier: contact
+  weight: 5
+- title: About
+  identifier: about
+  weight: 4
+- title: Research
+  identifier: research
+  weight: 3
+- title: Design
+  identifier: design
+  weight: 2
+- title: Art
+  identifier: art
+  weight: 1
