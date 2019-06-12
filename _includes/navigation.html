@@ -1,14 +1,11 @@
 {% assign currentFolder = Home %}
 
-
 {% for item in site.data.navigation %}
-    
     {% if item.children %}
     {% for child in item.children %}
         {% if page.url == child.link %}
             {% assign currentFolder = item.name %}
         {% endif %}
-
     {% endfor %}
     {% endif %}
 {% endfor %}
@@ -16,9 +13,14 @@
 <ul class="TreeWidget">
     {% for item in site.data.navigation %}
     <li class={% if currentFolder == item.name %} open {% endif%}>
-        <a href="{{ item.link }}" class="{% if currentFolder == item.name %}selected{% endif %}">
-        {{ item.name }}
-        </a>
+        {% if item.link=="" %}
+            <button class="{% if currentFolder == item.name %}selected{% endif %}">{{ item.name }}</button>
+        {% else %}
+            <a href="{{ item.link }}" class="{% if currentFolder == item.name %}selected{% endif %}">
+            {{ item.name }}
+            </a>
+        {% endif %}
+
         {% if item.children %}
         <ul>
         {% for item in item.children %}

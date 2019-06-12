@@ -1,6 +1,6 @@
 ---
 - name: Art
-  link: "#"
+  link: ""
   children:
   - name: Sculptures
     link: "/sculptures.html"

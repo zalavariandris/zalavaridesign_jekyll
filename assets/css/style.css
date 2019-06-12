@@ -90,22 +90,37 @@ nav li li{
 }
 
 nav a{
+    /*reset anchor style*/
     text-decoration: none;
     color: inherit;
+}
+
+nav button{
+    /*reset btn style*/
+    background: none;
+    border: none;
+    font: inherit;
+    padding: 0;
+    text-transform: inherit;
+
+    /**/
+    cursor: pointer;
 }
 
 nav a:visited{
     color: inherit;
 }
 
-nav a:hover{
+nav a:hover, nav button:hover{
     outline: 1px solid red;
     color: red;
 }
 
-nav a.selected{
+nav a.selected, nav button.selected{
     color: red;
 }
+
+
 
 nav li ul{
     overflow: hidden;
