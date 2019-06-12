@@ -22,3 +22,14 @@ fields:
     - type: text
       name: link
       label: link
+    config:
+      labelField: name
+- name: new_menu
+  type: list
+  config:
+    use_select: false
+    min: 
+    max: 
+    source:
+      type: simple
+  label: new menu
