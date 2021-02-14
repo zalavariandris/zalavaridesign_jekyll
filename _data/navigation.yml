@@ -3,39 +3,39 @@
   link: ""
   children:
   - name: Sculptures
-    link: "/sculptures.html"
+    link: "/sculptures"
   - name: Paintings
-    link: "/paintings.html"
+    link: "/paintings"
   - name: Studies
-    link: "/studies.html"
+    link: "/studies"
   - name: Exhibitions
-    link: "/exhibitions.html"
+    link: "/exhibitions"
 - name: Design
   link: "#"
   children:
   - name: Products
-    link: "/products.html"
+    link: "/products"
   - name: Environment
-    link: "/environment.html"
+    link: "/environment"
   - name: Corporate
-    link: "/corporate.html"
+    link: "/corporate"
 - name: Research
   link: "#"
   children:
   - name: Design Ecology
-    link: "/designecology.html"
+    link: "/designecology"
   - name: Form Studies
-    link: "/formstudies.html"
+    link: "/formstudies"
   - name: Workshops
-    link: "/workshops.html"
+    link: "/workshops"
 - name: About
   link: "#"
   children:
   - name: biography
-    link: "/biography.html"
+    link: "/biography"
   - name: philosophy
-    link: "/philosophy.html"
+    link: "/philosophy"
   - name: what can we do for you
-    link: "/whatcanwedoforyou.html"
+    link: "/whatcanwedoforyou"
 - name: Contact
-  link: contact.html
+  link: /contact

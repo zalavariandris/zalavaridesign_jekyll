@@ -1,15 +1,19 @@
 body{
-    display: flex;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    box-sizing: border-box;
     flex-direction: column;
     font-family: Verdana, Geneva, sans-serif;
     font-size: 8pt;
-    margin: auto;
+    margin: 0 auto;
 }
 
 @media only screen and (min-width: 600px) {
   body {
-    width: 720px;
+    max-width: 720px;
     padding: 3em;
+    padding-bottom: 0;
   }
 }
 
@@ -29,7 +33,6 @@ body>header, body>main{
     background-color: white;
     padding: 20px;
 }
-
 
 body>footer{
     flex-grow: 0;
@@ -52,12 +55,13 @@ header img{
 
 }
 
-h1{
+h2{
     font-weight: normal;
     font-family: verdana;
     text-transform: uppercase;
     border-bottom: 1px solid #efefef;
     margin-right: 37%;
+    font-size: 1.33rem;
 }
 
 /*Navigation*/
@@ -120,7 +124,9 @@ nav a.selected, nav button.selected{
     color: red;
 }
 
-
+nav{
+  /*white-space: nowrap;*/
+}
 
 nav li ul{
     overflow: hidden;
@@ -146,6 +152,9 @@ main figure{
 }
 
 /*figure*/
+figure{
+  margin: 3rem 0;
+}
 figure img{
     max-width: 100%;
     display: block;
@@ -162,6 +171,11 @@ figure>figcaption{
     padding: 0.5em;
     padding-left: 3em;
     float: right;
+
+    white-space: pre-line;
+
+    color: grey;
+    font-size: 0.66rem;
 }
 
 figure>figcaption>span{

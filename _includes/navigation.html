@@ -1,10 +1,15 @@
-{% assign currentFolder = Home %}
+{% assign current_folder = '' %}
 
 {% for item in site.data.navigation %}
     {% if item.children %}
     {% for child in item.children %}
-        {% if page.url == child.link %}
-            {% assign currentFolder = item.name %}
+        {% assign page_url = page.url | replace:'/',' ' | truncatewords: 1,"" %}
+        {% assign child_link = child.link | replace:'/',' ' | truncatewords: 1,"" %}
+
+
+        {% if page_url == child_link %}
+            {% assign current_folder = item.name %}
+            {% assign current_item = child.name %}
         {% endif %}
     {% endfor %}
     {% endif %}
@@ -12,11 +17,11 @@
 
 <ul class="TreeWidget">
     {% for item in site.data.navigation %}
-    <li class={% if currentFolder == item.name %} open {% endif%}>
+    <li class={% if current_folder == item.name %} open {% endif%}>
         {% if item.link=="" %}
-            <button class="{% if currentFolder == item.name %}selected{% endif %}">{{ item.name }}</button>
+            <button class="{% if current_folder == item.name %}selected{% endif %}">{{ item.name }}</button>
         {% else %}
-            <a href="{{ item.link }}" class="{% if currentFolder == item.name %}selected{% endif %}">
+            <a href="{{ item.link }}" class="{% if current_folder == item.name %}selected{% endif %}">
             {{ item.name }}
             </a>
         {% endif %}
@@ -25,7 +30,7 @@
         <ul>
         {% for item in item.children %}
         <li>
-            <a href="{{ item.link }}" {% if page.url == item.link %}class="selected"{% endif %}>{{item.name}}</a>
+            <a href="{{ item.link }}" {% if current_item == item.name %}class="selected"{% endif %}>{{item.name}}</a>
         </li>
         {% endfor %}
     </ul>
