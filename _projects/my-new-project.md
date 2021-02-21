@@ -2,9 +2,9 @@
 title: my new project + image
 gallery:
   - image:
-      url: media/WIN_20180724_10_12_05_Pro.jpg
-      title: WIN_20180724_10_12_05_Pro.jpg
+      url: media/WIN_20181119_13_48_09_Pro_LI.jpg
+      title: WIN_20181119_13_48_09_Pro_LI.jpg
       alt: ''
-    caption: kocka
+    caption: ''
 ---
 has some content, with an image
