@@ -1,24 +1,25 @@
 ---
-layout: new_layout
 title: Workshops
-
+layout: new_layout
 gallery:
-  - image: 
+  - image:
       url: /assets/images/research/workshops/P1010925z.jpg
     caption: |
       **Matali Crasset - József Zalavári - El Hassan Róza -Rácz Zsolt**
       *Craft Workshop Szendrőlád 2010*
-  - image: 
-      url: /assets/images/research/workshops/International_Design_Workshop-Zsennye01.jpg
+  - image:
+      url: >-
+        /assets/images/research/workshops/International_Design_Workshop-Zsennye01.jpg
     caption: |
       **International Design Workshop**
       *199?, Zsennye*
-  - image: 
-      url: /assets/images/research/workshops/International_Design_Workshop-Zsennye02.jpg
+  - image:
+      url: >-
+        /assets/images/research/workshops/International_Design_Workshop-Zsennye02.jpg
     caption: |
       **International Design Workshop**
       *199?, Zsennye*
-  - image: 
+  - image:
       url: /assets/images/research/workshops/IMG_Szerencs.jpg
     caption: |
       **Szerencs**

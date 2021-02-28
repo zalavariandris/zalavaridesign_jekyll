@@ -1,6 +1,6 @@
 ---
-layout: new_layout
 title: Philosophuy
+layout: new_layout
 ---
 
 

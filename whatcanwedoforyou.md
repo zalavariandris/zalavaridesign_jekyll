@@ -1,6 +1,6 @@
 ---
-layout: new_layout
 title: WHAT CAN WE DO FOR YOU
+layout: new_layout
 ---
 # WHAT CAN WE DO FOR YOU
 
