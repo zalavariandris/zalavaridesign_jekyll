@@ -1,1 +1,1 @@
-"# zalavaridesign_jekyll" 
+# zalavaridesign_jekyll
