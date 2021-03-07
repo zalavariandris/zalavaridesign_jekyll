@@ -62,4 +62,3 @@ gallery:
       Nokia Hungary
 ---
 add content
-new line
