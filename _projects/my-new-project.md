@@ -1,5 +1,6 @@
 ---
 title: my new project + image
+collection: projects
 gallery:
   - image:
       url: media/WIN_20181119_13_48_09_Pro_LI.jpg

@@ -1,5 +1,6 @@
 ---
 title: Form Studies
+collection: projects
 layout: new_layout
 gallery:
   - image:

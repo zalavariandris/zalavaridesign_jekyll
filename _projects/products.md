@@ -1,5 +1,6 @@
 ---
 title: Products
+collection: projects
 layout: new_layout
 gallery:
   - image:

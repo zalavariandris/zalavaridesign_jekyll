@@ -1,5 +1,6 @@
 ---
 title: Corporate
+collection: projects
 gallery:
   - image:
       url: /assets/images/design/corporate/onboxinbox.png
