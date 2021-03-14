@@ -1,5 +1,5 @@
 ---
-title: Philosophuy
+title: Philosophy
 layout: new_layout
 ---
 
