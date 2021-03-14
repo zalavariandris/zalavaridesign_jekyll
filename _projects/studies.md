@@ -1,6 +1,5 @@
 ---
 title: Studies
-collection: projects
 layout: new_layout
 gallery:
   - image:

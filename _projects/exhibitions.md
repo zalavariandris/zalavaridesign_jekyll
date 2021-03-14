@@ -1,6 +1,5 @@
 ---
 title: Exhibitions
-collection: projects
 layout: new_layout
 gallery:
   - image:
