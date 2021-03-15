@@ -1,8 +1,5 @@
 ---
 title: Design Ecology
-id: _projects/designecology.md
-name: designecology.md
-path: _projects/designecology.md
 layout: new_layout
 gallery:
   - image:
