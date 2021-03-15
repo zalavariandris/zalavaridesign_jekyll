@@ -1,8 +1,5 @@
 ---
 title: Form Studies
-id: _projects/formstudies.md
-name: formstudies.md
-path: _projects/formstudies.md
 layout: new_layout
 gallery:
   - image:
