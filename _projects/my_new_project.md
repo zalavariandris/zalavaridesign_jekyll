@@ -1,8 +1,6 @@
 ---
 title: My New Project
 date: '2020-01-01'
-id: /projects/my_new_project
-name: untitled.md
 gallery:
   - image:
       url: media/IMG_4108.JPG
