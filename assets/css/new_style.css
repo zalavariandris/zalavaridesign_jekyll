@@ -80,7 +80,7 @@ nav li{
 }
 
 nav li li {
-    display: inline;
+    display: inline-block;
 }
 
 nav li{
@@ -97,6 +97,7 @@ nav a{
     /*reset anchor style*/
     text-decoration: none;
     color: inherit;
+    border:  1px solid transparent;
 }
 
 nav button{
@@ -116,7 +117,7 @@ nav a:visited{
 }
 
 nav a:hover, nav button:hover{
-    outline: 1px solid red;
+    border: 1px solid red;
     color: red;
 }
 

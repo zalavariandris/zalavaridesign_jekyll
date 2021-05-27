@@ -1,5 +1,6 @@
 ---
 title: Corporate
+layout: new_layout
 gallery:
   - image:
       url: /assets/images/design/corporate/onboxinbox.png

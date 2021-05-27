@@ -18,16 +18,14 @@
 <ul class="TreeWidget">
     {% for item in site.data.navigation %}
     <li class={% if current_folder == item.name %} open {% endif%}>
-        {% if item.link=="" %}
+        {% if item.link=="" or item.link=="#" %}
             <button class="{% if current_folder == item.name %}selected{% endif %}">{{ item.name }}</button>
         {% else %}
-            {% if item.link == "#"}
-            <a href="#" class="{% if current_folder == item.name %}selected{% endif %}">
-            {%else%}
-            {%endif%}
+
             <a href="{{ item.link | relative_url }}" class="{% if current_folder == item.name %}selected{% endif %}">
-            {{ item.name }}
+                {{ item.name }}
             </a>
+            
         {% endif %}
 
         {% if item.children %}
