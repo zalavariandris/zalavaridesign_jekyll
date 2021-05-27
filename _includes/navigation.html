@@ -21,7 +21,7 @@
         {% if item.link=="" %}
             <button class="{% if current_folder == item.name %}selected{% endif %}">{{ item.name }}</button>
         {% else %}
-            <a href="{{ item.link }}" class="{% if current_folder == item.name %}selected{% endif %}">
+            <a href="{{ item.link | relative_url }} }}" class="{% if current_folder == item.name %}selected{% endif %}">
             {{ item.name }}
             </a>
         {% endif %}
@@ -30,7 +30,7 @@
         <ul>
         {% for item in item.children %}
         <li>
-            <a href="{{ item.link }}" {% if current_item == item.name %}class="selected"{% endif %}>{{item.name}}</a>
+            <a href="{{ item.link | relative_url  }}" {% if current_item == item.name %}class="selected"{% endif %}>{{item.name}}</a>
         </li>
         {% endfor %}
     </ul>
