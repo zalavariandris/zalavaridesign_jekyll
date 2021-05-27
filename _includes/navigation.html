@@ -21,7 +21,11 @@
         {% if item.link=="" %}
             <button class="{% if current_folder == item.name %}selected{% endif %}">{{ item.name }}</button>
         {% else %}
-            <a href="{{ item.link }}" class="{% if current_folder == item.name %}selected{% endif %}">
+            {% if item.link == "#"}
+            <a href="#" class="{% if current_folder == item.name %}selected{% endif %}">
+            {%else%}
+            {%endif%}
+            <a href="{{ item.link | relative_url }}" class="{% if current_folder == item.name %}selected{% endif %}">
             {{ item.name }}
             </a>
         {% endif %}
