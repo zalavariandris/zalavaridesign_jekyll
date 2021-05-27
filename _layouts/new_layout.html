@@ -116,7 +116,7 @@
             <section>
                     {% for fig in page.gallery %}
                     <figure>
-                        <img src="{{fig.image.url}}"/>
+                        <img src="{{fig.image.url | relative_url}}"/>
                         <figcaption>
                             {{fig.caption | markdownify | strip}}
                         </figcaption>

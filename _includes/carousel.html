@@ -1,7 +1,7 @@
 <div class="Carousel">
     {% for image in page.images %}
     <figure id="{{image.title | slugify}}">
-      <img src={{image.url}}>
+      <img src={{image.url | relative_url}}>
       <figcaption>
         <span class="title"><a href="#{{image.title | slugify}}">{{image.title}}</a></span>
         <span class="description">{{image.description}}</span>
