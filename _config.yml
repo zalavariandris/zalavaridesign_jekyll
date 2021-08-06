@@ -8,7 +8,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: /zalavaridesign_jekyll
 permalink: pretty
 
-livereload: true     # You no longer need to include --livereload
+livereload: false
 incremental: false
 
 collections:
@@ -19,6 +19,13 @@ collections:
     title: Projects
     output: true
     permalink: "/:name/"
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
 
 plugins:
   - jekyll-seo-tag

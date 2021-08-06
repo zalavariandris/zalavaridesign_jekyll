@@ -1,6 +1,5 @@
 ---
 title: Form Studies
-layout: new_layout
 gallery:
   - image:
       url: /assets/images/research/haiku1.jpg

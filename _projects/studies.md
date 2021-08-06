@@ -1,6 +1,5 @@
 ---
 title: Studies
-layout: new_layout
 gallery:
   - image:
       url: /assets/images/art/studies/sybilla.jpg

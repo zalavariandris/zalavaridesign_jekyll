@@ -1,6 +1,5 @@
 ---
 title: Design Ecology
-layout: new_layout
 gallery:
   - image:
       url: /assets/images/research/kettosecoharomszog.jpg

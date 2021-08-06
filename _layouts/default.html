@@ -4,17 +4,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>zalavaridesign - {{ page.title | downcase }}</title>
         <link rel="stylesheet" href="{{'assets/css/style.css' | relative_url }}"/>
-
+        <link rel="stylesheet" href="{{'assets/css/menu.css' | relative_url }}"/>
+        <link rel="stylesheet" href="{{'assets/css/carousel.css' | relative_url }}"/>
 
         <!--
         <script type="text/javascript" src="/assets/js/treewidget.js"></script>
         -->
-        <script type="text/javascript" src="{{'assets/js/carousel.js' | relative_url }}"></script>
-        <script type="text/javascript" src="{{'assets/js/jquery-3.4.1.min.js' | relative_url }}"></script>
+        <script type="text/javascript" src="{{ '/assets/js/carousel.js' | relative_url }}"></script>
+        <script type="text/javascript" src="{{ '/assets/js/jquery-3.4.1.min.js' | relative_url }}"></script>
     </head>
     <body class="no-js">
         <script type="text/javascript">
-            document.body.classList.remove("no-js")
+            document.body.classList.remove("no-js");
         </script>
 
         <header>
@@ -23,12 +24,27 @@
             </nav>
 
             <a href="/">
-                <img width="140px" height="90px" src="{{'assets/images/zalavaridesign_logo-2019.svg' | relative_url }}">
+                <img width="140px" height="90px" src="{{ '/assets/images/zalavaridesign_logo-2019.svg' | relative_url }}">
             </a>
         </header>
 
         <main>
-            {{ content }}
+          {% if page.title %}
+            <h2>{{page.title}}</h2>
+            {% endif %}
+            <section>
+                {{ content }}
+            </section>
+            <section>
+                    {% for fig in page.gallery %}
+                    <figure>
+                        <img src="{{fig.image.url | relative_url}}"/>
+                        <figcaption>
+                            {{fig.caption | markdownify | strip}}
+                        </figcaption>
+                    </figure>
+                    {% endfor %}
+            </section>
         </main>
 
         <footer>

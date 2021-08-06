@@ -1,6 +1,5 @@
 ---
 title: Paintings
-layout: new_layout
 gallery:
   - image:
       url: /assets/images/art/paintings/terarhitectura_1992.jpg

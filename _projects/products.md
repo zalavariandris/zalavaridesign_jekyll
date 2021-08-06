@@ -1,6 +1,5 @@
 ---
 title: Products
-layout: new_layout
 gallery:
   - image:
       url: /assets/images/design/productdesign/graphitex.jpg

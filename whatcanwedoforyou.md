@@ -3,7 +3,6 @@ title: WHAT CAN WE DO FOR YOU
 id: whatcanwedoforyou.md
 name: whatcanwedoforyou.md
 path: whatcanwedoforyou.md
-layout: new_layout
 ---
 # WHAT CAN WE DO FOR YOU
 

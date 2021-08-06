@@ -1,6 +1,5 @@
 ---
 title: Contact
-layout: new_layout
 ---
 # Contact
 

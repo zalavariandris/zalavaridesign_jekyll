@@ -1,6 +1,5 @@
 ---
 title: Workshops
-layout: new_layout
 gallery:
   - image:
       url: /assets/images/research/workshops/P1010925z.jpg

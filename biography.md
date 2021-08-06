@@ -1,6 +1,5 @@
 ---
 title: Biography
-layout: new_layout
 ---
 I was born in Pécs, Hungary in 1955. I'm qualified engineer and designer. I studied Industrial Design at the University of Applied Arts in Budapest from 1980-1984. Since setting up my own design practice Zalavari Design in Budapest in 1984. In 1985 begins I teaching activity at the same university. I were given a professorship in ecodesign at the Budapest University of Technology and Economics in 1999.
 

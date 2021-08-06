@@ -1,6 +1,5 @@
 ---
 title: Exhibitions
-layout: new_layout
 gallery:
   - image:
       url: /assets/images/art/exhibitions/sotet_vilagos_byart_2016zj.jpg

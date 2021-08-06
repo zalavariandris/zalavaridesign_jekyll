@@ -1,6 +1,5 @@
 ---
 title: Environment
-layout: new_layout
 gallery:
   - image:
       url: /assets/images/design/environment/Bollard_D_1500060.jpg

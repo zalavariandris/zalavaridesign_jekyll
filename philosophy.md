@@ -1,6 +1,5 @@
 ---
 title: Philosophy
-layout: new_layout
 ---
 
 

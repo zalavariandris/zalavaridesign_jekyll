@@ -1,6 +1,5 @@
 ---
 title: Sculptures
-layout: new_layout
 gallery:
   - image:
       url: /assets/images/art/sculptures/2018/red_moon_2018_zj.jpg

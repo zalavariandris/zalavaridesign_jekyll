@@ -1,0 +1,77 @@
+.Widget-Carousel{
+  overflow: hidden;
+  position: relative;
+}
+
+.Widget-Carousel>.viewport{
+  position: absolute;
+  height: 100%;
+}
+
+.Widget-Carousel .slide{
+  position: absolute;
+  left: 0;
+}
+
+.Widget-Carousel button{
+  border: none;
+  background: none;
+  display: block;
+  position: absolute;
+  
+  top: 50%;
+  padding: 1em 0;
+  margin-top: -1.5em;
+  cursor: pointer;
+}
+
+.Widget-Carousel button:focus{
+  outline: none;
+}
+.Widget-Carousel button:hover{
+  text-decoration: underline;
+}
+
+.Widget-Carousel button.prev{
+  left: 0;
+  padding-right: 1em;
+}
+.Widget-Carousel button.next{
+  right: 0;
+  padding-left: 1em;
+}
+
+.Widget-Carousel * {
+  user-select: none;
+}
+
+@keyframes fadeIn{
+  to { opacity: 1; }
+}
+
+.Widget-Carousel figure{
+  opacity: 0;
+  animation: fadeIn ease  1s;
+  animation-fill-mode: forwards;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.Widget-Carousel .slide img{
+  pointer-events: none;
+  user-select: none;
+  min-height: 0;
+  min-width: 0;
+  object-fit: contain;
+  object-position: right;
+}
+
+/* flex layout for carousel */
+main{
+  display: flex;
+  flex-direction: column;
+}
+main .Widget-Carousel{
+  flex-grow: 1;
+}
